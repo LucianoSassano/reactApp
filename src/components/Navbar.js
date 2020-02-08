@@ -53,10 +53,10 @@ class Navbar extends Component {
                 <img className="circle" src={profile} alt="profile pic" />
               </a>
               <a href="#name">
-                <span className="white-text name">John Doe</span>
+                <span className="white-text name">Luciano Sassano</span>
               </a>
               <a href="#email">
-                <span className="white-text email">jdandturk@gmail.com</span>
+                <span className="white-text email">lucianosassano1@gmail.com</span>
               </a>
             </div>
           </li>
