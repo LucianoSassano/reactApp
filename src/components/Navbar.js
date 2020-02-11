@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import fondo from './imagenes/fondo.jpg';
-import profile from './imagenes/profile.jpeg';
-
-
+import fondo from "./imagenes/fondo.jpg";
+import profile from "./imagenes/profile.jpeg";
+import Card from "./Card";
 
 class Navbar extends Component {
   componentDidMount() {
@@ -17,7 +16,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav>
+        <nav class="black">
           <div className="nav-wrapper">
             <a
               href="#"
@@ -26,7 +25,13 @@ class Navbar extends Component {
             >
               <i className="material-icons">menu</i>
             </a>
-            
+            <div class="input-field right col s12">
+              <input id="search" type="search" required />
+              <label class="label-icon" for="search">
+                <i class="material-icons">search</i>
+              </label>
+              <i class="material-icons">close</i>
+            </div>
           </div>
         </nav>
 
@@ -43,28 +48,32 @@ class Navbar extends Component {
                 <span className="white-text name">Luciano Sassano</span>
               </a>
               <a href="#email">
-                <span className="white-text email">lucianosassano1@gmail.com</span>
+                <span className="white-text email">
+                  lucianosassano1@gmail.com
+                </span>
               </a>
             </div>
           </li>
           <li>
-            <a href="#!">
-              <i className="material-icons">cloud</i>Follow me on GitHub!
+            <a href="https://github.com/LucianoSassano" target="blank">
+              <i className="material-icons">account_circle</i>Follow me on
+              GitHub!
             </a>
-          </li>
-          <li>
-            <a href="#!">Second Link</a>
           </li>
           <li>
             <div className="divider"></div>
           </li>
           <li>
-            <a className="subheader">Subheader</a>
-          </li>
-          <li>
-            <a className="waves-effect" href="#!">
-              Third Link With Waves
-            </a>
+            <form>
+              <label>
+                <input type="checkbox" id="front-check" class="filled-in" />
+                <span>Front-end</span>
+              </label>
+              <label>
+                <input type="checkbox" id="back-check" class="filled-in" />
+                <span>Back-end</span>
+              </label>
+            </form>
           </li>
         </ul>
       </div>
