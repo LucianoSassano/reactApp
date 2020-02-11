@@ -13,6 +13,8 @@ class Navbar extends Component {
     });
   }
 
+
+
   render() {
     return (
       <div>
@@ -70,7 +72,7 @@ class Navbar extends Component {
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check" class="filled-in" />
+                <input type="checkbox" id="back-check" onclick={alert("hola")} class="filled-in" />
                 <span>Back-end</span>
               </label>
             </form>
