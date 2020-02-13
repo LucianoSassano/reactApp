@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-
+/*import jsLogo from "./imagenes/js.svg";
+import cssLogo from "./imagenes/css3.jpg";
+import reactLogo from "./imagenes/reactJs.png";
+import nodeLogo from "./imagenes/nodeJs.png";
+import pythonLogo from "./imagenes/python.jpg";*/
 import htmlLogo from "./imagenes/html5.png";
 
 class Card extends Component {
@@ -18,8 +22,8 @@ class Card extends Component {
         <div className="col s12 m4 l3 front">
           <div className="card-small">
             <div className="card-image">
-              <img src={htmlLogo} alt="html" />
-             <span className="card-title">{this.props.title}</span>
+              <img src={htmlLogo} />
+              <span className="card-title">{this.props.title}</span>
             </div>
             <div className="card-content">
               <p>{this.props.content}</p>

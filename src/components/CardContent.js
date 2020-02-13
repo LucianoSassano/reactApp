@@ -10,30 +10,31 @@ export default class CardContent extends React.Component {
         {
           title: "HTML",
           langType: "front",
-          content: "mi contenido nuevo",
-          link:
-            "https://stackoverflow.com/questions/49081549/passing-object-as-props-to-jsx"
+          content:
+            "HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing amarkup-based pattern to it ",
+          link: "https://html.spec.whatwg.org/multipage/"
         },
         {
           title: "JavaScript",
           langType: "front",
-          content: "mi contenido",
+          content:
+            "JavaScript,often abbreviated as JS, is an interpreted programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.",
           link:
-            "https://stackoverflow.com/questions/49081549/passing-object-as-props-to-jsx"
+            "https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript"
         },
         {
           title: "CSS",
           langType: "front",
-          content: "mi contenido",
-          link:
-            "https://stackoverflow.com/questions/49081549/passing-object-as-props-to-jsx"
+          content:
+            "Cascading Style Sheets (CSS) is a style sheet language usedfor describing the presentation of a document written in markup language like HTML.",
+          link: "https://www.w3.org/Style/CSS/"
         },
         {
           title: "NodeJs",
           langType: "back",
-          content: "mi contenido",
-          link:
-            "https://stackoverflow.com/questions/49081549/passing-object-as-props-to-jsx"
+          content:
+            "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser.",
+          link: "https://nodejs.org/en/"
         }
       ]
     };
@@ -49,12 +50,13 @@ export default class CardContent extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          {this.state.cards.map(card => (
+          {this.state.cards.map((card, key) => (
             <Card
               title={card.title}
               img={card.img}
               content={card.content}
               link={card.link}
+              key={card.key}
             />
           ))}
         </div>
