@@ -18,7 +18,7 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav class="black">
+        <nav className="black">
           <div className="nav-wrapper">
             <a
               href="#"
@@ -27,12 +27,12 @@ class Navbar extends Component {
             >
               <i className="material-icons">menu</i>
             </a>
-            <div class="input-field right col s12">
+            <div className="input-field right col s12">
               <input id="search" type="search" required />
-              <label class="label-icon" for="search">
-                <i class="material-icons">search</i>
+              <label className="label-icon" for="search">
+                <i className="material-icons">search</i>
               </label>
-              <i class="material-icons">close</i>
+              <i className="material-icons">close</i>
             </div>
           </div>
         </nav>
@@ -68,11 +68,11 @@ class Navbar extends Component {
           <li>
             <form>
               <label>
-                <input type="checkbox" id="front-check" class="filled-in" />
+                <input type="checkbox" id="front-check" className="filled-in" />
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check" onClick={(langType) => CardContent.prototype.hideCard(langType)} class="filled-in" />
+                <input type="checkbox" id="back-check" onClick={(langType) => CardContent.prototype.hideCard(langType)} className="filled-in" />
                 <span>Back-end</span>
               </label>
             </form>
