@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import fondo from "./imagenes/fondo.jpg";
 import profile from "./imagenes/profile.jpeg";
-import Card from "./Card";
+import CardContent from "./CardContent";
 
 class Navbar extends Component {
   componentDidMount() {
@@ -13,12 +13,10 @@ class Navbar extends Component {
     });
   }
 
-
-
   render() {
     return (
       <div>
-        <nav class="black">
+        <nav className="black">
           <div className="nav-wrapper">
             <a
               href="#"
@@ -27,12 +25,12 @@ class Navbar extends Component {
             >
               <i className="material-icons">menu</i>
             </a>
-            <div class="input-field right col s12">
+            <div className="input-field right col s12">
               <input id="search" type="search" required />
-              <label class="label-icon" for="search">
-                <i class="material-icons">search</i>
+              <label className="label-icon" htmlFor="search">
+                <i className="material-icons">search</i>
               </label>
-              <i class="material-icons">close</i>
+              <i className="material-icons">close</i>
             </div>
           </div>
         </nav>
@@ -41,7 +39,7 @@ class Navbar extends Component {
           <li>
             <div className="user-view">
               <div className="background">
-                <img src={fondo}></img>
+                <img src={fondo} alt="background"></img>
               </div>
               <a href="#user">
                 <img className="circle" src={profile} alt="profile pic" />
@@ -68,11 +66,21 @@ class Navbar extends Component {
           <li>
             <form>
               <label>
-                <input type="checkbox" id="front-check" class="filled-in" />
+                <input
+                  type="checkbox"
+                  id="front-check"
+                  onClick={() => this.props.cardFilter("front")}
+                  className="filled-in"
+                />
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check" onclick={alert("hola")} class="filled-in" />
+                <input
+                  type="checkbox"
+                  id="back-check"
+                  onClick={() => this.props.cardFilter("back")}
+                  className="filled-in"
+                />
                 <span>Back-end</span>
               </label>
             </form>
