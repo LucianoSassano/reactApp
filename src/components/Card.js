@@ -25,7 +25,7 @@ class Card extends Component {
           <div class="col s12 m4 l3 front">
             <div class="card-small">
               <div class="card-image">
-                <img src={htmlLogo}  />
+                <img src={htmlLogo} alt="html"  />
                 <span class="card-title">HTML5</span>
               </div>
               <div class="card-content">
@@ -49,7 +49,7 @@ class Card extends Component {
           <div class="col s12 m4 l3" >
             <div class="card-small">
               <div class="card-image">
-                <img src={cssLogo} />
+                <img src={cssLogo} alt="Css" />
                 <span class="card-title">CSS</span>
               </div>
               <div class="card-content">
@@ -70,7 +70,7 @@ class Card extends Component {
           <div class="col s12 m4 l3">
             <div class="card-small">
               <div class="card-image">
-                <img src={jsLogo} />
+                <img src={jsLogo} alt="js" />
                 <span class="card-title">JavaScript</span>
               </div>
               <div class="card-content">

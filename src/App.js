@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Card from './components/Card';
+import CardContent from './components/CardContent';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Card/>
+      <CardContent /*card={CardContent.card1}*//>
     </div>
   );
 }

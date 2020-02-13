@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import fondo from "./imagenes/fondo.jpg";
 import profile from "./imagenes/profile.jpeg";
-import Card from "./Card";
+import CardContent from "./CardContent";
 
 class Navbar extends Component {
   componentDidMount() {
@@ -72,7 +72,7 @@ class Navbar extends Component {
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check" onclick={alert("hola")} class="filled-in" />
+                <input type="checkbox" id="back-check" onClick={(langType) => CardContent.prototype.hideCard(langType)} class="filled-in" />
                 <span>Back-end</span>
               </label>
             </form>
