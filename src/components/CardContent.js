@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import Navbar from "./Navbar";
 
 export default class CardContent extends React.Component {
   constructor(props) {
@@ -41,13 +42,19 @@ export default class CardContent extends React.Component {
         }
       ]
     };
+  
   }
+  
 
   hideCard(langType) {
     this.setState({
       cards: this.state.cards.filter(card => card.langType !== langType)
+      
     });
   }
+
+
+
 
   render() {
     return (

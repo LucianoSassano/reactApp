@@ -13,8 +13,6 @@ class Navbar extends Component {
     });
   }
 
-
-
   render() {
     return (
       <div>
@@ -29,7 +27,7 @@ class Navbar extends Component {
             </a>
             <div className="input-field right col s12">
               <input id="search" type="search" required />
-              <label className="label-icon" for="search">
+              <label className="label-icon" htmlFor="search">
                 <i className="material-icons">search</i>
               </label>
               <i className="material-icons">close</i>
@@ -68,11 +66,21 @@ class Navbar extends Component {
           <li>
             <form>
               <label>
-                <input type="checkbox" id="front-check" className="filled-in" />
+                <input
+                  type="checkbox"
+                  id="front-check"
+                  onClick={() => this.props.cardFilter("front")}
+                  className="filled-in"
+                />
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check"  className="filled-in" />
+                <input
+                  type="checkbox"
+                  id="back-check"
+                  onClick={() => this.props.cardFilter("back")}
+                  className="filled-in"
+                />
                 <span>Back-end</span>
               </label>
             </form>
