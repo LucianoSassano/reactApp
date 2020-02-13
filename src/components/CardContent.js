@@ -4,6 +4,9 @@ import Card from "./Card";
 export default class CardContent extends React.Component {
   constructor(props) {
     super(props);
+    this.hideCard = this.hideCard.bind(this);
+    console.log(this);
+    
 
     this.state = {
       cards: [
@@ -56,7 +59,7 @@ export default class CardContent extends React.Component {
               img={card.img}
               content={card.content}
               link={card.link}
-              key={card.key}
+              key={key}
             />
           ))}
         </div>

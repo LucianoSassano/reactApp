@@ -22,7 +22,7 @@ class Card extends Component {
         <div className="col s12 m4 l3 front">
           <div className="card-small">
             <div className="card-image">
-              <img src={htmlLogo} />
+              <img src={htmlLogo} alt="logo"/>
               <span className="card-title">{this.props.title}</span>
             </div>
             <div className="card-content">

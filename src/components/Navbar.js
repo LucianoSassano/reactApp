@@ -41,7 +41,7 @@ class Navbar extends Component {
           <li>
             <div className="user-view">
               <div className="background">
-                <img src={fondo}></img>
+                <img src={fondo} alt="background"></img>
               </div>
               <a href="#user">
                 <img className="circle" src={profile} alt="profile pic" />
@@ -72,7 +72,7 @@ class Navbar extends Component {
                 <span>Front-end</span>
               </label>
               <label>
-                <input type="checkbox" id="back-check" onClick={(langType) => CardContent.prototype.hideCard(langType)} className="filled-in" />
+                <input type="checkbox" id="back-check"  className="filled-in" />
                 <span>Back-end</span>
               </label>
             </form>
