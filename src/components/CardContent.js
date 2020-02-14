@@ -8,13 +8,12 @@ export default class CardContent extends React.Component {
   constructor(props) {
     super(props);
     this.filterRender = this.filterRender.bind(this);
-    
 
     this.state = {
       cards: [
         {
           title: "HTML",
-          img : ./imagenes/css3.jpg,
+          img: "./imagenes/html5.png",
           langType: "front",
           content:
             "HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing amarkup-based pattern to it ",
@@ -22,7 +21,7 @@ export default class CardContent extends React.Component {
         },
         {
           title: "JavaScript",
-          img:"./imagenes/css3.jpg",
+          img: "./imagenes/js.svg",
           langType: "front",
           content:
             "JavaScript,often abbreviated as JS, is an interpreted programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.",
@@ -39,27 +38,46 @@ export default class CardContent extends React.Component {
         },
         {
           title: "NodeJs",
-          img:"./imagenes/css3.jpg",
+          img: "./imagenes/nodeJs.png",
           langType: "back",
           content:
             "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser.",
           link: "https://nodejs.org/en/"
+        },
+        {
+          title: "ReactJs",
+          img: "./imagenes/reactJs.png",
+          langType: "front",
+          content:
+            "React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página.",
+          link: "https://es.reactjs.org/"
+        },
+        {
+          title: "Python",
+          img: "./imagenes/python.jpg",
+          langType: "back",
+          content:
+            "Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código.Se trata de un lenguaje de programación multiparadigma, ya que soporta orientación a objetos, programación imperativa y, en menor medida, programación funcional. Es un lenguaje interpretado, dinámico y multiplataforma.",
+          link: "https://www.python.org/"
         }
       ]
     };
   }
 
-  filterRender(){
-   let arrCards = this.state.cards.filter (card => (card.langType === this.props.language || this.props.language === null));
-   return arrCards;
-  
+  filterRender() {
+    let arrCards = this.state.cards.filter(
+      card =>
+        card.langType === this.props.language || this.props.language === null
+    );
+
+      arrCards = this.state.cards.filter(card => card.title.toLowerCase() === this.props.result || this.props.result === "" );
+      // debo convertir mi object a un string para usar methodos de string sobre el mismo , split para dividir los caracteres y comparar letra por letra 
+      //contains para chequear la existencia.
+    return arrCards;
   }
-
-
 
   render() {
     return (
-      
       <div className="container">
         <div className="row">
           {this.filterRender().map((card, key) => (

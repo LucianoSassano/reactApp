@@ -9,13 +9,19 @@ function App() {
   const cardFilter = e => {
     setLanguage(e);
     console.log(e);
-    
+  };
+
+  const [result, setResult] = useState("");
+
+  const search = val => {
+    setResult(val);
+    console.log(val);
   };
 
   return (
     <div className="App">
-      <Navbar cardFilter={cardFilter} />
-      <CardContent language={language} />
+      <Navbar cardFilter={cardFilter} search={search} />
+      <CardContent language={language} result={result} />
     </div>
   );
 }
