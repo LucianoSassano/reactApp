@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import fondo from "./imagenes/fondo.jpg";
 import profile from "./imagenes/profile.jpeg";
-import CardContent from "./CardContent";
 
 class Navbar extends Component {
   componentDidMount() {
@@ -67,7 +66,8 @@ class Navbar extends Component {
             <form>
               <label>
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name='radio-btn'
                   id="front-check"
                   onClick={() => this.props.cardFilter("front")}
                   className="filled-in"
@@ -76,7 +76,8 @@ class Navbar extends Component {
               </label>
               <label>
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name="radio-btn"
                   id="back-check"
                   onClick={() => this.props.cardFilter("back")}
                   className="filled-in"
