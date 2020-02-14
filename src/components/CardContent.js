@@ -14,7 +14,7 @@ export default class CardContent extends React.Component {
       cards: [
         {
           title: "HTML",
-          img : ./imagenes/css3.jpg,
+          img : "./imagenes/html5.png",
           langType: "front",
           content:
             "HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing amarkup-based pattern to it ",
@@ -22,7 +22,7 @@ export default class CardContent extends React.Component {
         },
         {
           title: "JavaScript",
-          img:"./imagenes/css3.jpg",
+          img:"./imagenes/js.svg",
           langType: "front",
           content:
             "JavaScript,often abbreviated as JS, is an interpreted programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.",
@@ -39,7 +39,7 @@ export default class CardContent extends React.Component {
         },
         {
           title: "NodeJs",
-          img:"./imagenes/css3.jpg",
+          img : "./imagenes/nodeJs.png",
           langType: "back",
           content:
             "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser.",
