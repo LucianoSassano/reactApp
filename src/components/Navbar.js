@@ -25,7 +25,14 @@ class Navbar extends Component {
               <i className="material-icons">menu</i>
             </a>
             <div className="input-field right col s12">
-              <input id="search" type="search" required />
+              <input
+                id="search"
+                type="search"
+                onChange={() =>
+                  this.props.search(document.getElementById("search").value)
+                }
+                required
+              />
               <label className="label-icon" htmlFor="search">
                 <i className="material-icons">search</i>
               </label>
@@ -67,7 +74,7 @@ class Navbar extends Component {
               <label>
                 <input
                   type="radio"
-                  name='radio-btn'
+                  name="radio-btn"
                   id="front-check"
                   onClick={() => this.props.cardFilter("front")}
                   className="filled-in"
@@ -77,7 +84,7 @@ class Navbar extends Component {
               <label>
                 <input
                   type="radio"
-                  name="radio-btn"
+                  name="radio"
                   id="back-check"
                   onClick={() => this.props.cardFilter("back")}
                   className="filled-in"
