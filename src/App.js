@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import CardContent from "./components/CardContent";
+import Chart from "./components/Chart";
 
 function App() {
   const [language, setLanguage] = useState(null);
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
       <Navbar cardFilter={cardFilter} search={search} />
       <CardContent language={language} result={result} />
+    
     </div>
   );
 }
