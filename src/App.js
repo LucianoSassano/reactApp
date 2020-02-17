@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <Navbar cardFilter={cardFilter} search={search} />
       <CardContent language={language} result={result} />
+      <Chart></Chart>
     
     </div>
   );
