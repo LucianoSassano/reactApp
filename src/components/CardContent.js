@@ -1,16 +1,18 @@
 import React, { Component, Fragment } from "react";
 import Card from "./Card";
 
+
 //usar una funcion para la creacion de las cards , que me filtre  en mi state de Card content , el evento que le paso
 //si el evento es null creame todas las cards pero si tiene algo filtrame
 
 export default class CardContent extends React.Component {
   constructor(props) {
     super(props);
-    this.filterRender = this.filterRender.bind(this);
+    this.filterRender1 = this.filterRender1.bind(this);
+    this.filterRender2 = this.filterRender2.bind(this);
 
     this.state = {
-      cards: [
+      cards1: [
         {
           title: "HTML",
           img: "./imagenes/html5.png",
@@ -35,7 +37,9 @@ export default class CardContent extends React.Component {
           content:
             "Cascading Style Sheets (CSS) is a style sheet language usedfor describing the presentation of a document written in markup language like HTML.",
           link: "https://www.w3.org/Style/CSS/"
-        },
+        }
+      ],
+      cards2: [
         {
           title: "NodeJs",
           img: "./imagenes/nodeJs.png",
@@ -64,23 +68,56 @@ export default class CardContent extends React.Component {
     };
   }
 
-  filterRender() {
-    let arrCards = this.state.cards.filter(
+  filterRender1() {
+    let arrCards1 = this.state.cards1.filter(
       card =>
-        card.langType === this.props.language || this.props.language === null
+        card.langType == this.props.language || this.props.language === null
     );
 
-      arrCards = this.state.cards.filter(card => card.title.toLowerCase() === this.props.result || this.props.result === "" );
-      // debo convertir mi object a un string para usar methodos de string sobre el mismo , split para dividir los caracteres y comparar letra por letra 
-      //contains para chequear la existencia.
-    return arrCards;
+    arrCards1 = this.state.cards1.filter(
+      card =>
+        card.title.toLowerCase() === this.props.result ||
+        this.props.result === ""
+    );
+    // debo convertir mi object a un string para usar methodos de string sobre el mismo , split para dividir los caracteres y comparar letra por letra
+    //contains para chequear la existencia.
+    return arrCards1;
   }
+
+  filterRender2() {
+    let arrCards2 = this.state.cards2.filter(
+      card =>
+        card.langType == this.props.language || this.props.language === null
+    );
+
+    arrCards2 = this.state.cards2.filter(
+      card =>
+        card.title.toLowerCase() === this.props.result ||
+        this.props.result === ""
+    );
+    // debo convertir mi object a un string para usar methodos de string sobre el mismo , split para dividir los caracteres y comparar letra por letra
+    //contains para chequear la existencia.
+    return arrCards2;
+  }
+
+  handleChart() {}
 
   render() {
     return (
       <div className="container">
         <div className="row">
-          {this.filterRender().map((card, key) => (
+          {this.filterRender1().map((card, key) => (
+            <Card
+              title={card.title}
+              img={card.img}
+              content={card.content}
+              link={card.link}
+              key={key}
+            />
+          ))}
+        </div>
+        <div className="row">
+          {this.filterRender2().map((card, key) => (
             <Card
               title={card.title}
               img={card.img}

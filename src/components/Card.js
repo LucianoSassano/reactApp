@@ -10,13 +10,15 @@ class Card extends Component {
     });
   }
 
+  
+
   render() {
     return (
       <div className="container">
         <div className="col s12 m4 l3 front">
           <div className="card-small">
             <div className="card-image">
-              <img src={require("" + this.props.img)} />
+              <img src={require("" + this.props.img)} onClick={() => this.props.handleChart} />
               <span className="card-title">{this.props.title}</span>
             </div>
             <div className="card-content">
